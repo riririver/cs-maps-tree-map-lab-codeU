@@ -169,7 +169,13 @@ public class MyTreeMapTest {
 	 */
 	@Test
 	public void testRemove() {
-		// nothing to test, since this method is not implemented
+		Integer value = map.remove("06");
+		assertThat(value, is(6));
+		
+		Set<String> keySet = map.keySet();
+		assertThat(keySet.size(), is(8));
+		
+		assertThat(keySet.contains("06"), is(false));
 	}
 
 	/**
